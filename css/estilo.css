@@ -1,0 +1,209 @@
+:root {
+    --background-top-header: #162028;
+    --color-text-menu: #425564;
+    --color-text: #555;
+    --color-background-box-image: #003d52;
+    --color-background-footer: #0b171f;
+    --color-text-footer: #6f8597;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-text);
+}
+
+/* Régua central reutilizável para alinhar o conteúdo no meio da tela */
+.container {
+    width: 1024px;
+    max-width: 92%;
+    margin: 0 auto;
+}
+
+/* 1. Header ocupando 100% da largura da tela */
+.header-top {
+    background-color: var(--background-top-header);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-banner {
+    font-family: 'Viaoda Libre', cursive;
+    color: #fff;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.header-nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    color: var(--color-text-menu);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 4px;
+    transition: color 0.3s linear;
+}
+
+.header-nav a:hover {
+    color: #fff;
+}
+
+/* 2. Faixa com degradê nas laterais da imagem principal */
+.banner-wrapper {
+    width: 100%;
+    background: linear-gradient(90deg, #1d323d 0%, #020507 100%);
+}
+
+.img-header {
+    width: 100%;
+    display: block;
+}
+
+/* 3. Texto introdutório */
+.portfolio {
+    padding: 60px 80px 40px;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-family: 'Viaoda Libre', cursive;
+    font-size: 36px;
+    color: #252525;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.portfolio p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* 4. Galeria de produtos/modelos */
+.gallery {
+    padding: 0 80px 70px;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.gallery-card {
+    flex: 1;
+    text-align: center;
+}
+
+.gallery-card img {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.gallery-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #252525;
+    margin: 0 0 6px;
+}
+
+.gallery-text {
+    font-size: 14px;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* 5. Secção About ocupando 100% da largura com fundo azul escuro */
+.about {
+    background-color: var(--color-background-box-image);
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    color: #fff;
+    padding: 90px 0;
+}
+
+.about h2 {
+    font-family: 'Viaoda Libre', cursive;
+    text-transform: uppercase;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 25px;
+}
+
+.about p {
+    line-height: 1.7;
+    width: 65%;
+    margin: 0;
+}
+
+/* 6. Rodapé ocupando 100% da largura */
+.footer {
+    background-color: var(--color-background-footer);
+    color: var(--color-text-footer);
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 5px;
+    padding: 25px 0;
+}
+
+/* 7. Responsividade básica para telas menores (celular/tablets) */
+@media (max-width: 768px) {
+    .header-top {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-nav ul {
+        gap: 20px;
+    }
+
+    .portfolio,
+    .gallery {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .about {
+        padding: 50px 0;
+    }
+
+    .about h2 {
+        font-size: 32px;
+    }
+
+    .about p {
+        width: 100%;
+    }
+}
